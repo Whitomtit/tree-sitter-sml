@@ -3,7 +3,7 @@ const WORD = token(/0w\d+|0wx[0-9A-Fa-f]+/);
 const FLOAT = token(/~?\d+\.\d+([Ee]~?\d+)?/);
 
 module.exports = grammar({
-	name: 'standard_ml',
+	name: 'sml',
 
 	extras: $ => [
 		/\s/,
@@ -345,7 +345,6 @@ module.exports = grammar({
 			$.exception_ldec,
 			$.open_ldec,
 			$.fixity_ldec,
-			$.overload_ldec,
 		),
 
 		// Value declarations
@@ -473,16 +472,6 @@ module.exports = grammar({
 		fixity_ldec: $ => seq(
 			choice(seq(choice('infix', 'infixr'), optional($.int_constant)), 'nonfix'),
 			repeat1($._full_ident),
-		),
-
-		overload_ldec: $ => seq(
-			'overload',
-			$._full_ident,
-			':',
-			$._ty,
-			'as',
-			$._exp,
-			repeat(seq('and', $._exp)),
 		),
 
 		// Patterns

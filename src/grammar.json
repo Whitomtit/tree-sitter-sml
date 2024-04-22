@@ -1,5 +1,5 @@
 {
-  "name": "standard_ml",
+  "name": "sml",
   "word": "ident",
   "rules": {
     "source_file": {
