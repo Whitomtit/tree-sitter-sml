@@ -1,6 +1,6 @@
 {
   "name": "@whitomtit/tree-sitter-sml",
-  "version": "0.0.9",
+  "version": "0.0.10",
   "description": "Standard ML Grammar for Tree-sitter",
   "main": "index.js",
   "types": "bindings/node",
@@ -18,16 +18,9 @@
   "repository": "https://github.com/Whitomtit/tree-sitter-sml",
   "dependencies": {
     "node-addon-api": "^7.1.0",
-    "node-gyp-build": "^4.8.0"
-  },
-  "peerDependencies": {
+    "node-gyp-build": "^4.8.0",
     "tree-sitter": "^0.21.1",
     "tree-sitter-cli": "^0.22.5"
-  },
-  "peerDependenciesMeta": {
-    "tree_sitter": {
-      "optional": true
-    }
   },
   "devDependencies": {
     "prebuildify": "^6.0.0",
