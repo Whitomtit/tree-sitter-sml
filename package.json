@@ -1,15 +1,15 @@
 {
   "name": "@whitomtit/tree-sitter-sml",
-  "version": "0.0.7",
+  "version": "0.0.8",
   "description": "Standard ML Grammar for Tree-sitter",
   "main": "index.js",
   "types": "bindings/node",
   "scripts": {
-    "preinstall": "tree-sitter generate",
-    "pretest": "npm run preinstall",
+    "compile": "tree-sitter generate",
+    "pretest": "npm run compile",
     "test": "tree-sitter test",
     "gen-wasm": "tree-sitter build-wasm",
-    "install": "node-gyp-build",
+    "install": "npm run compile && node-gyp-build",
     "prebuildify": "prebuildify --napi --strip",
     "release": "standard-version && git push --follow-tags && npm publish"
   },
