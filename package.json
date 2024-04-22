@@ -1,6 +1,6 @@
 {
-  "name": "tree-sitter-sml",
-  "version": "0.0.2",
+  "name": "@whitomtit/tree-sitter-sml",
+  "version": "0.0.3",
   "description": "Standard ML Grammar for Tree-sitter",
   "main": "index.js",
   "types": "bindings/node",
