@@ -1,30 +1,37 @@
 {
   "name": "@whitomtit/tree-sitter-sml",
-  "version": "0.0.10",
+  "version": "0.0.11",
   "description": "Standard ML Grammar for Tree-sitter",
-  "main": "index.js",
+  "main": "bindings/node",
   "types": "bindings/node",
   "scripts": {
-    "preinstall": "tree-sitter generate",
-    "pretest": "npm run preinstall",
-    "test": "tree-sitter test",
-    "gen-wasm": "tree-sitter build-wasm",
     "install": "node-gyp-build",
     "prebuildify": "prebuildify --napi --strip",
+    "build": "tree-sitter generate --no-bindings",
+    "build-wasm": "tree-sitter build --wasm",
+    "parse": "tree-sitter parse",
+    "test": "tree-sitter test",
     "release": "standard-version && git push --follow-tags && npm publish"
   },
   "author": "Di Wang",
   "license": "MIT",
   "repository": "https://github.com/Whitomtit/tree-sitter-sml",
   "dependencies": {
-    "node-addon-api": "^7.1.0",
-    "node-gyp-build": "^4.8.0",
-    "tree-sitter": "^0.21.1",
-    "tree-sitter-cli": "^0.22.5"
+    "node-addon-api": "^8.0.0",
+    "node-gyp-build": "^4.8.0"
+  },
+  "peerDependencies": {
+    "tree-sitter": "^0.21.0"
+  },
+  "peerDependenciesMeta": {
+    "tree_sitter": {
+      "optional": true
+    }
   },
   "devDependencies": {
     "prebuildify": "^6.0.0",
-    "standard-version": "^9.5.0"
+    "standard-version": "^9.5.0",
+    "tree-sitter-cli": "^0.22.5"
   },
   "files": [
     "grammar.js",
