@@ -11,7 +11,8 @@
       "sources": [
         "bindings/node/binding.cc",
         "src/parser.c",
-		"src/scanner.cc"
+		"src/scanner.cc",
+        # NOTE: if your language has an external scanner, add it here.
       ],
       "conditions": [
         ["OS!='win'", {

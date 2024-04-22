@@ -4119,7 +4119,6 @@
     }
   ],
   "conflicts": [],
-  "precedences": [],
   "externals": [
     {
       "type": "SYMBOL",
@@ -4137,3 +4136,4 @@
   "inline": [],
   "supertypes": []
 }
+
