@@ -5,8 +5,8 @@
   "main": "index.js",
   "types": "bindings/node",
   "scripts": {
-    "preinstall": "tree-sitter generate",
-    "pretest": "npm run preinstall",
+    "compile": "tree-sitter generate",
+    "pretest": "npm run compile",
     "test": "tree-sitter test",
     "gen-wasm": "tree-sitter build-wasm",
     "install": "node-gyp-build",
